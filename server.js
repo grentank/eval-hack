@@ -13,7 +13,8 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const { data } = req.body;
   const result = eval(data);
-  res.json({ result });
+  console.log(`${data} = ${result}`);
+  res.send(result);
 });
 
 app.listen(PORT, () => console.log(`Server has started on port ${PORT}`));

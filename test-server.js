@@ -4,4 +4,4 @@ fetch('https://eval-hack.onrender.com/', {
         'Content-Type': 'application/json'
     },
     body: JSON.stringify({data: '1+3'})
-}).then(res => res.text()).then(console.log)
+}).then(res => res.json()).then(console.log)
