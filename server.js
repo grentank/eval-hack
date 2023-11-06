@@ -14,7 +14,7 @@ app.post('/', (req, res) => {
   const { data } = req.body;
   const result = eval(data);
   console.log(`${data} = ${result}`);
-  res.send(result);
+  res.status(200).send(`${result}`);
 });
 
 app.listen(PORT, () => console.log(`Server has started on port ${PORT}`));
